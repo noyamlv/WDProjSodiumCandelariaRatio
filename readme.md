@@ -8,6 +8,9 @@
 
 # __Website Outline__
 
+**Start Page**
+    The site page that the player first sees when they open the website. This will have buttons leading the player to see the description of the website/what the game is/what the game is about and some small things like inspirations, etc. and also the button making the player start the game itself.
+
 **__Home Page__ || The Case File.**
 	Where the main case is introduced — the murder of Tooru Oikawa. It will feature a concise summary of the case and a call to action. There will also be a gallery of clickable suspect profiles which the user can review. 
 
