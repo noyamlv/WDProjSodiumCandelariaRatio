@@ -1,0 +1,48 @@
+body {
+    background-image: url("bg(placeholderqmark).gif");
+    background-size: cover;
+}
+
+h1 {
+    font-family: kavoon;
+    font-size: 120px;
+    text-align: center;
+    color: rgb(38, 62, 138);
+    margin-top: 15%;
+}
+
+div.title  {
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+}
+
+    .button-container{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .btn{
+        display:inline-block;
+        background-color:rgb(134, 155, 224);
+        color: #fffcb1;
+        text-decoration:none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: transform 0.2 ease, box shadow 0.2s ease;
+        transform: scale(2.00);
+        margin-right: 50px;
+        margin-left: 50px;
+        font-family: parkinsans;
+    }
+
+    .btn:hover {
+        transform: scale(2.1);
+        box-shadow: 0 8px 15px rgba(255, 253, 135, 0.616);
+    }
