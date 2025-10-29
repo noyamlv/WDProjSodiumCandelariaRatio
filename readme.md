@@ -32,3 +32,4 @@
 **How Javascript will be incorporated:** Javascript will primarily be used in the *Final Accusation* page. Javascript will handle the more interactive features like the different outcomes based off who the user chooses who the culprit is. Additionally, it will also be used for showing the final verdict or reveal screen after the user submits their choice. It will also be primarily used in the *Case File* page/*Home Page* as well in which it will show the different files of the different possible suspects.
 
 **Initial Wireframe:** 
+testing 
