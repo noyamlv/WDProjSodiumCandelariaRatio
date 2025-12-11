@@ -35,4 +35,28 @@
 [Canva Wireframe](https://www.canva.com/design/DAG3K12YAAE/vYhX_vitVQV29YizkAmlKA/edit?utm_content=DAG3K12YAAE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ![alt text](image.png)
-This is the start page
+This is the starting page. It has two buttons, About and Start. About leads you to the about page, which talks about what the website is and some credits for the elements to be used. Start allows you to start the game.
+
+![alt text](image-1.png)
+This is the home page/case file (subject to change). It includes information about the person who died and also has buttons leading you to the other possible people who may have killed him. There is also a button, leading to the evidence board, which sums up the information you have gathered about your suspects.
+
+![alt text](image-2.png)
+This is the home page/case file (subject to change). It includes information about the suspect and also has buttons leading you to the other possible people who may have killed him, including the person who died. Other than the button leading to the evidence board, all suspect files have a button leading you to the interrogation room.
+
+![alt text](image-3.png)
+This is the evidence board, which sums up all the information you have gathered about your suspects. When the picture of them are clicked, you can go to their case file. Additionally, there is also a button leading to the interrogation room. There will also be a button to confirm that you are ready to say who the killer is.
+
+![alt text](image-4.png)
+This is the interrogation room before you enter. All features are described in the photo.
+
+![alt text](image-5.png)
+This is the interrogation room when you enter. When you click, it will change the dialogue and you and the suspect will exchange dialogue with each other to find more clues.
+
+![alt text](image-6.png)
+This is the final accusation. You pick a suspect who you think is the killer, and when you click on it, it will lead you to a screen where you connect clues together to prove so.
+
+![alt text](image-7.png)
+This is the final accusation page after you click on who you think the killer is. There will be clues, and you will be piecing them together to prove that your person is truly the killer. 
+
+![alt text](image-8.png)
+This is the reveal page, where you find out who the killer truly is after you submit who you think the killer is. There will be a description as to why he was the killer and the true way of how he killed the person.
