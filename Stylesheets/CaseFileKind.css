@@ -2,7 +2,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background: #ddb160;
-  font-family: "Times New Roman", serif;
+  font-family: "Newsreader", "Sour Gummy", "Freckle Face";
   overflow: hidden;
 }
 
@@ -78,10 +78,14 @@ body {
   font-size: 0.95em;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
+  font-family: "Sour Gummy";
 }
 
 .evidence-btn:hover {
-  background: #7fa5de;
+  background: #400a04d3;
+  color:#fff8f7d3;
+  font-family: "Freckle Face";
+  letter-spacing: 1px;
 }
 
 .evidence-btn:active {
@@ -104,7 +108,8 @@ body {
 }
 
 .evidence-photo.small {
-  width: 100px;
+  width: 8.9vw;
+  height: 20vh;
   padding: 5px;
   background: #fff;
   box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
