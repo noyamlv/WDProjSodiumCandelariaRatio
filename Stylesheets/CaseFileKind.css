@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ddb160;
+  font-family: "Times New Roman", serif;
+  overflow: hidden;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  gap: 40px;
+}
+
+.paper {
+  position: relative;        
+  width: 55vw;
+  min-height: 90vh;
+  background: #fdfcf8;
+  border: 1px solid #d4d0c3;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  padding: 40px;
+  padding-right: 180px;      
+}
+
+.victim-photo {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border: 2px solid #444;
+  background: #eee;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+  transform: rotate(-1.5deg);
+}
+
+.suspects {
+  width: 20vw;
+  color: #e5e5e5;
+}
+
+.suspects h2 {
+  margin-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+}
+
+.suspects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.suspects li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.side-panel {
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       
+  padding-top: 60px;        
+}
+
+.evidence-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #8fb3e8;
+  color: #fff4b0;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95em;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.evidence-btn:hover {
+  background: #7fa5de;
+}
+
+.evidence-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.side-panel svg {
+  margin-top: 10px; 
+}
+
+.side-polaroids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.evidence-photo.small {
+  width: 100px;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+  text-align: center;
+  transform-origin: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.evidence-photo.small .photo-content {
+  height: 70px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.evidence-photo.small .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+}
+
+.evidence-photo.small .case-name {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.rotate-1 { transform: rotate(-3deg); }
+.rotate-2 { transform: rotate(2deg); }
+.rotate-3 { transform: rotate(-1deg); }
+.rotate-4 { transform: rotate(3deg); }
+
+
