@@ -1,27 +1,23 @@
-const img = document.getElementById("flashImg");
+console.log("script.js loaded"); 
+
+const overlay = document.querySelector(".paper-overlay");
+
+if (!overlay) {
+  console.error("overlay not found");
+}
 
 let appearances = 0;
-let baseDuration = 150;
-let increment = 850;
-let isShowing = false;
 
 setInterval(() => {
-  if (isShowing) return;
-
-  // 70% chance to show
-  if (Math.random() > 0.7) return;
-
   appearances++;
-  isShowing = true;
 
-  const showTime = baseDuration + appearances * increment;
+  const duration = appearances * 1000; 
 
-  img.style.opacity = "1";
+  overlay.style.display = "block";
 
   setTimeout(() => {
-    img.style.opacity = "0";
-    isShowing = false;
-  }, showTime);
+    overlay.style.display = "none";
+  }, duration);
 
 }, 10000);
 

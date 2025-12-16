@@ -23,7 +23,8 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   padding: 60px;
   padding-right: 180px; 
-  padding-left: 90px;     
+  padding-left: 90px;   
+  position: relative;  
 }
 
 .victim-photo {
@@ -140,6 +141,21 @@ body {
   text-align: center;
 }
 
+.rotate-1 { transform: rotate(-3deg); }
+.rotate-2 { transform: rotate(2deg); }
+.rotate-3 { transform: rotate(-1deg); }
+.rotate-4 { transform: rotate(3deg); }
+
+.glitching {
+  animation: glitchFlash 0.12s infinite;
+}
+
+@keyframes glitchFlash {
+  0%   { filter: hue-rotate(0deg); }
+  50%  { filter: hue-rotate(120deg); }
+  100% { filter: hue-rotate(0deg); }
+}
+
 #flashImg {
   position: fixed;
   top: 50%;
@@ -147,8 +163,52 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.1s linear;
   z-index: 9999;
 }
 
+.paper-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../deadkawa.png");
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+  display: none;
+  animation: glitch 2s infinite;
+}
 
+@keyframes glitch {
+
+  82% {
+    transform: translate(4px, -5px);
+    background: #3f1d2e80;
+    background-image: url("../deadkawa.png");
+    font-family: Newsreader;
+    filter: hue-rotate(120deg);
+  }
+
+  84% {
+    transform: translate(-2px, 1px);
+    background: #88303061;
+    background-image: url("../deadkawa.png");
+    font-family: Newsreader;
+    filter: hue-rotate(220deg);
+  }
+
+  86% {
+    transform: translate(0);
+    font-family: Sour Gummy;
+    filter: none;
+  }
+
+  100% {
+    transform: translate(0);
+    font-family: Sour Gummy;
+    filter: none;
+  }
+}
 
