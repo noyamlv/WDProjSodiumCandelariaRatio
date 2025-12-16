@@ -1,33 +1,28 @@
-function glitchPhotoSequence() {
-  const body = document.body;
+const img = document.getElementById("flashImg");
 
-  // Step 1: glitch IN
-  body.classList.add("glitching");
+let appearances = 0;
+let baseDuration = 150;
+let increment = 850;
+let isShowing = false;
 
-  // Step 2: switch photo shortly after
+setInterval(() => {
+  if (isShowing) return;
+
+  // 70% chance to show
+  if (Math.random() > 0.7) return;
+
+  appearances++;
+  isShowing = true;
+
+  const showTime = baseDuration + appearances * increment;
+
+  img.style.opacity = "1";
+
   setTimeout(() => {
-    body.classList.add("photo-glitch");
-  }, 200);
+    img.style.opacity = "0";
+    isShowing = false;
+  }, showTime);
 
-  // Step 3: stop glitch (photo stays)
-  setTimeout(() => {
-    body.classList.remove("glitching");
-  }, 1200);
+}, 10000);
 
-  // Step 4: glitch OUT
-  setTimeout(() => {
-    body.classList.add("glitching");
-    body.classList.remove("photo-glitch");
-  }, 3000);
 
-  // Step 5: back to normal
-  setTimeout(() => {
-    body.classList.remove("glitching");
-  }, 3800);
-}
-
-// start after 10 seconds
-setTimeout(glitchPhotoSequence, 10000);
-
-// repeat every 30 seconds
-setInterval(glitchPhotoSequence, 30000);

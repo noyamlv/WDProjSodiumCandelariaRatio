@@ -140,22 +140,15 @@ body {
   text-align: center;
 }
 
-.rotate-1 { transform: rotate(-3deg); }
-.rotate-2 { transform: rotate(2deg); }
-.rotate-3 { transform: rotate(-1deg); }
-.rotate-4 { transform: rotate(3deg); }
-
-.glitching {
-  animation: glitchFlash 0.12s infinite;
+#flashImg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
 }
 
-@keyframes glitchFlash {
-  0%   { filter: hue-rotate(0deg); }
-  50%  { filter: hue-rotate(120deg); }
-  100% { filter: hue-rotate(0deg); }
-}
 
-.photo-glitch {
-  background: url("../oikawatowel.jpg") center / cover no-repeat;
-}
 
