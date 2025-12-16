@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  min-height: 100vh;
+  min-height: 150vh;
   background: #ddb160;
   font-family: "Newsreader", "Sour Gummy", "Freckle Face";
   overflow: hidden;
@@ -21,16 +21,17 @@ body {
   background: #fdfcf8;
   border: 1px solid #d4d0c3;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  padding: 40px;
-  padding-right: 180px;      
+  padding: 60px;
+  padding-right: 180px; 
+  padding-left: 90px;     
 }
 
 .victim-photo {
   position: absolute;
   top: 30px;
   right: 70px;
-  width: 170px;
-  height: 170px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border: 2px solid #444;
   background: #eee;
@@ -94,22 +95,22 @@ body {
 }
 
 .side-panel svg {
-  margin-top: 10px; 
+  margin-top: 40px; 
 }
 
 .side-polaroids {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
   width: 100%;
+  margin-top: 0;
 }
 
 .evidence-photo.small {
-  width: 8.9vw;
-  height: 20vh;
+  top: 30px;
+  right: 70px;
+  width: 250px;
+  height: 270px;
   padding: 5px;
   background: #fff;
   box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
@@ -120,7 +121,7 @@ body {
 }
 
 .evidence-photo.small .photo-content {
-  height: 70px;
+  height: 200px;
   overflow: hidden;
   border: 1px solid #ccc;
   background: #fff;
@@ -144,4 +145,17 @@ body {
 .rotate-3 { transform: rotate(-1deg); }
 .rotate-4 { transform: rotate(3deg); }
 
+.glitching {
+  animation: glitchFlash 0.12s infinite;
+}
+
+@keyframes glitchFlash {
+  0%   { filter: hue-rotate(0deg); }
+  50%  { filter: hue-rotate(120deg); }
+  100% { filter: hue-rotate(0deg); }
+}
+
+.photo-glitch {
+  background: url("../oikawatowel.jpg") center / cover no-repeat;
+}
 
