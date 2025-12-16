@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case File</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Stylesheets/CaseFileTrial.css">
+</head>
+<body>
+  <div class="layout">
+
+    <div class="folder">
+      <div class="folder-tab"></div>
+      <div class="paper">
+        <h1 class="victim-name">Tooru Oikawa</h1>
+
+        <img src="../oikawatowel.jpg" alt="Victim ID" class="victim-photo">
+
+        <p class="victim-text">
+          "If you're going to hit it, hit it until it breaks"<br><br>
+          Age: 17 years old<br>
+          Height: 184.3cm<br>
+          School: Aoba Johsai High<br>
+          Volleyball Position: Setter / Captain<br><br>
+          When he was found: 6:07 pm, July 20<br>
+          Where he was found: <br>
+          Who found the body: Tobio Kageyama<br><br>
+        </p>
+      </div>
+    </div>
+
+    <aside class="side-panel">
+      <a href="EvidenceBoard.html" class="evidence-btn">Evidence Board</a>
+
+      <svg class="suspects-arc" width="220" height="120" viewBox="0 0 220 120">
+        <path id="curve" d="M10,110 A100,100 0 0,1 210,110" fill="transparent" />
+        <text fill="#000" font-size="24" font-family="Freckle Face" font-weight="900">
+          <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            Suspects
+          </textPath>
+        </text>
+      </svg>
+
+      <div class="side-polaroids">
+        <div class="evidence-photo small rotate-1">
+          <div class="photo-content">
+            <img src="assets/Monday_Schedule.PNG" alt="Suspect 1" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #1 - Kageyama Tobio</h3>
+        </div>
+        <div class="evidence-photo small rotate-2">
+          <div class="photo-content">
+            <img src="assets/Tuesday_Schedule.PNG" alt="Suspect 2" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #2 - Iwaizumi Hajime</h3>
+        </div>
+        <div class="evidence-photo small rotate-3">
+          <div class="photo-content">
+            <img src="assets/Wednesday_Schedule.PNG" alt="Suspect 3" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #3 - Ushijima Wakatoshi</h3>
+        </div>
+        <div class="evidence-photo small rotate-4">
+          <div class="photo-content">
+            <img src="assets/Thursday_Schedule.PNG" alt="Suspect 4" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #4 - Name</h3>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="glitch-overlay"></div>
+
+  <script src="CaseFileTrial.js"></script>
+</body>
+</html>
