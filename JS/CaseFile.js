@@ -20,5 +20,3 @@ setInterval(() => {
   }, duration);
 
 }, 10000);
-
-
