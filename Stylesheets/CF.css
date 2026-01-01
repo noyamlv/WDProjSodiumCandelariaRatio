@@ -1,7 +1,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #e8d9b9; /* Warmer, paper-like background */
+  background: #e8d9b9; 
   font-family: "Newsreader", serif;
   overflow-x: hidden;
   color: #2c1e15;
@@ -40,7 +40,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* Victim Polaroid */
 .victim-polaroid {
   position: absolute;
   top: 30px;
@@ -69,7 +68,6 @@ body {
   text-transform: uppercase;
 }
 
-/* Side Panel */
 .side-panel {
   width: 30%;
   display: flex;
