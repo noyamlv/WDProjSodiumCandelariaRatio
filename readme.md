@@ -1,3 +1,11 @@
+# 3rd Qtr Update
+## [Final Title] Case on Court
+## [2 sentence description]
+## [Features (min 3)]
+## [Details]
+## [Definition of Done]
+---
+
 # Title: __Case on Court__ 
 ## 2nd Title: __The final set decides more than the score.__
 
