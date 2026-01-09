@@ -1,10 +1,21 @@
 # 3rd Qtr Update
 ## [Final Title] Case on Court
-## [2 sentence description]
+## [2 sentence description] 
+Case on Court is an interactive detective game that reimagines the world of Haikyuu!! as a murder mystery. Players investigate the suspicious death of Tooru Oikawa by analyzing alibis, cross-referencing evidence, and interrogating suspects to uncover hidden truths—and possibly, a shocking twist.
+
 ## [Features (min 3)]
 ## [Details]
+The game unfolds across seven key pages: Start, About, Home (Case File), Evidence Board, Interrogation Room, Final Accusation, and The Reveal. It emphasizes deductive reasoning while appealing to Haikyuu fans through character-driven storytelling. The interface uses clickable profiles, dialogue logs, and clue-matching mechanics to simulate real detective work. A major narrative twist—Oikawa potentially faking his death to frame others adds depth
+
 ## [Definition of Done]
----
+- All pages are fully linked and navigable.
+- Suspect profiles, evidence entries, and interrogation dialogues are complete and consistent.
+- JavaScript logic correctly validates user accusations and displays the appropriate reveal (true culprit + explanation).
+- Responsive design works across desktop and mobile views.
+- Assets (favicon, images) are finalized and properly integrated.
+
+
+// gavva kanalng bagon file if u vvant (dobolyu dont vvork on my laptop)
 
 # Title: __Case on Court__ 
 ## 2nd Title: __The final set decides more than the score.__

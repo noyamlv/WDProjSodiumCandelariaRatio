@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evidence Board</title>
+  <link rel="stylesheet" href="../Stylesheets/EvidenceBoard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="board-container">
+
+    <div class="logo-center">
+      <h1 class="logo-text">[ Case on Court ]</h1>
+      <div class="subtitle">[ insert cool stuff ]</div>
+      <div class="interrogation-tag">Interrogation Room</div>
+    </div>
+
+    <div class="suspect-card victim-card" id="victim" style="top: 150px; left: 400px;">
+      <div class="suspect-photo"><img src="../oikawatowel.jpg"></div>
+      <div class="suspect-name">Victim: Tooru Oikawa</div>
+      <div class="clue-summary">Suicide? Or staged?</div>
+      <div class="suicide-note">“I love iwa [ Dying message ]” — Note found at scene</div>
+    </div>
+
+    <!-- yama -->
+    <div class="suspect-card" id="suspect0" style="top: 80px; left: 150px;">
+      <div class="suspect-photo"><img src="../kageyama.jpg"></div>
+      <div class="suspect-name">Kageyama Tobio</div>
+      <div class="clue-summary">Last seen near victim’s flat.</div>
+    </div>
+
+    <!-- Iwa -->
+    <div class="suspect-card" id="suspect1" style="top: 80px; left: 650px;">
+      <div class="suspect-photo"><img src="../iwaizumi.jpg"></div>
+      <div class="suspect-name">Iwaizumi Hajime</div>
+      <div class="clue-summary">Financial ties to victim.</div>
+    </div>
+
+    <!-- ushimijma -->
+    <div class="suspect-card" id="suspect2" style="top: 350px; left: 150px;">
+      <div class="suspect-photo"><img src="../ushijima.jpg"></div>
+      <div class="suspect-name">Ushijima Wakatoshi</div>
+      <div class="clue-summary">Knew victim’s secrets.</div>
+    </div>
+
+    <!-- hiantra -->
+    <div class="suspect-card red-vibe" id="suspect3" style="top: 350px; left: 650px;">
+      <div class="suspect-photo"><img src="../hinatajump.jpg"></div>
+      <div class="suspect-name">Hinata Shoyo</div>
+      <div class="clue-summary">Covering up evidence?</div>
+    </div>
+
+    <div class="clue-card" style="top: 180px; left: 100px;">CLUES<br>• Found near window<br>• No forced entry</div>
+    <div class="clue-card" style="top: 180px; left: 500px;">CLUES<br>• Bank transfer Dec 31<br>• $50k to unknown account</div>
+    <div class="clue-card" style="top: 400px; left: 100px;">CLUES<br>• Diary entries missing<br>• Last page torn</div>
+    <div class="clue-card" style="top: 400px; left: 500px;">CLUES<br>• Gun registered to victim<br>• No fingerprints</div>
+
+    <div class="pin" style="top: 150px; left: 400px;"></div>
+    <div class="pin" style="top: 80px; left: 150px;"></div>
+    <div class="pin" style="top: 80px; left: 650px;"></div>
+    <div class="pin" style="top: 350px; left: 150px;"></div>
+    <div class="pin" style="top: 350px; left: 650px;"></div>
+
+    <div class="sherlock">'Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth.’ — Sherlock Holmes</div>
+
+  <script src="../JS/EvidenceBoard.js"></script>
+</body>
+</html>
