@@ -1,21 +1,4 @@
-# 3rd Qtr Update
-## [Final Title] Case on Court
-## [2 sentence description] 
-Case on Court is an interactive detective game that reimagines the world of Haikyuu!! as a murder mystery. Players investigate the suspicious death of Tooru Oikawa by analyzing alibis, cross-referencing evidence, and interrogating suspects to uncover hidden truths—and possibly, a shocking twist.
-
-## [Features (min 3)]
-## [Details]
-The game unfolds across seven key pages: Start, About, Home (Case File), Evidence Board, Interrogation Room, Final Accusation, and The Reveal. It emphasizes deductive reasoning while appealing to Haikyuu fans through character-driven storytelling. The interface uses clickable profiles, dialogue logs, and clue-matching mechanics to simulate real detective work. A major narrative twist—Oikawa potentially faking his death to frame others adds depth
-
-## [Definition of Done]
-- All pages are fully linked and navigable.
-- Suspect profiles, evidence entries, and interrogation dialogues are complete and consistent.
-- JavaScript logic correctly validates user accusations and displays the appropriate reveal (true culprit + explanation).
-- Responsive design works across desktop and mobile views.
-- Assets (favicon, images) are finalized and properly integrated.
-
-
-// gavva kanalng bagon file if u vvant (dobolyu dont vvork on my laptop)
+Third quarter update is at the bottom!
 
 # Title: __Case on Court__ 
 ## 2nd Title: __The final set decides more than the score.__
@@ -79,3 +62,30 @@ This is the final accusation page after you click on who you think the killer is
 
 ![alt text](image-8.png)
 This is the reveal page, where you find out who the killer truly is after you submit who you think the killer is. There will be a description as to why he was the killer and the true way of how he killed the person.
+
+# Third Quarter Update!
+## [Final Title] Case on Court
+
+## [2 sentence description] 
+Case on Court is an interactive detective game that reimagines the world of Haikyuu!! as a murder mystery. Players investigate the suspicious death of Tooru Oikawa by analyzing alibis, cross-referencing evidence, and interrogating suspects to uncover hidden truths—and possibly, a shocking twist.
+
+## [Features]
+
+Visuals:
+- Glitch effects (Example: Tooru's dead body LOL..)
+- Animated elements!
+- Change favicon as story progresses, make glitch effects worse too
+
+Mechanics:
+- For the Interrogation room, implement a sliding javascript for when pressing the arrow button, it will move to another person to interrogate, and pressing anywhere else will lead you to start the interrogation
+- Evidence board which arranges all clues and is the mainframe of the investigation, making it easy for the player to see all the information they have collected
+
+## [Details]
+The game unfolds across seven key pages: Start, About, Home (Case File), Evidence Board, Interrogation Room, Final Accusation, and The Reveal. It emphasizes deductive reasoning while appealing to Haikyuu fans through character-driven storytelling. The interface uses clickable profiles, dialogue logs, and clue-matching mechanics to simulate real detective work. A major narrative twist—Oikawa potentially faking his death to frame others adds depth.
+
+## [Definition of Done]
+- All pages are fully linked and navigable.
+- Suspect profiles, evidence entries, and interrogation dialogues are complete and consistent.
+- JavaScript logic correctly validates user accusations and displays the appropriate reveal (true culprit + explanation).
+- Responsive design works across desktop and mobile views.
+- Assets (favicon, images) are finalized and properly integrated.
