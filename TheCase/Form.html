@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    #caseFileForm {
+        background: #f0f0f0;
+        padding: 20px;
+        border: 2px solid #333;
+        font-family: 'Courier New', monospace;
+        max-width: 600px;
+    }
+</style>
+    <form id="caseFileForm">
+    <h3>OFFICIAL CASE FILE</h3>
+    
+    <label for="caseNumber">Case Number:</label>
+    <input type="text" id="caseNumber" name="caseNumber" required>
+
+    <label for="suspectName">Primary Suspect Name:</label>
+    <input type="text" id="suspectName" name="suspectName">
+
+    <label for="evidenceList">Key Evidence Collected (comma-separated):</label>
+    <textarea id="evidenceList" name="evidenceList"></textarea>
+
+    <label for="timeline">Timeline of Events:</label>
+    <textarea id="timeline" name="timeline"></textarea>
+
+    <label for="conclusion">Your Conclusion / Theory:</label>
+    <textarea id="conclusion" name="conclusion"></textarea>
+
+    <button type="button" onclick="saveCaseFile()">Save Case File</button>
+    </form>
+</html>
