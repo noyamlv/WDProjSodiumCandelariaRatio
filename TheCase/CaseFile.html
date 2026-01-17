@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Case File</title>
-  <link rel="stylesheet" href="../Stylesheets/CaseFileKind.css">
+  <link rel="stylesheet" href="../Stylesheets/CaseFile.css">
   <link rel="icon" type="image/x-icon" href="../favicon1.png">
   <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-  
-  
   <div class="layout">
-
     <div class="paper">
-
       <div class="paper-overlay"></div>
-
-      <img src="../oikawatowel.jpg" alt="Victim ID" class="victim-photo">
+      <div class="victim-polaroid">
+        <img src="../Images/Suspects/oikawatowel.jpg" alt="Victim ID" class="victim-photo">
+        <div class="polaroid-label">VICTIM: TOORU OIKAWA</div>
+      </div>
 
       <h1>Tooru Oikawa</h1>
       <p>
@@ -29,55 +26,50 @@
         School: Aoba Johsai High <br>
         Volleyball Position: Setter / Captain <br> <br>
         When he was found: 6:07 pm, July 20<br>
-        Where he was found: <br>
+        Where he was found: <span class="redacted">[REDACTED]</span><br>
         Who found the body: Iwaizumi Hajime<br> <br>
-        On July 20, 6767, at approximately 6:07 p.m., the body of Tooru Oikawa, a student and volleyball player at Aoba Johsai High School, was discovered in the [san nga yun?] locker room. The locker room door was locked at the time and was opened by teammate Hajime Iwaizumi, who reported the incident. Upon entry, Iwaizumi observed Oikawa lying unresponsive on the floor with significant blood present on the surrounding lockers and tiles. A blood-stained dagger was found near the victim’s body, consistent with apparent stab wounds. Emergency services were notified immediately, and responding officers secured the scene upon arrival. The victim was pronounced dead at the scene, and the locker room was treated as a restricted crime scene pending further forensic examination. <br>
-
-      </p>
-
+        On July 20, 6767, at approximately 6:07 p.m., the body of Tooru Oikawa, a student and volleyball player at Aoba Johsai High School, was discovered in the <span class="redacted">[CLASSIFIED LOCATION]</span> locker room. The locker room door was locked at the time and was opened by teammate Hajime Iwaizumi, who reported the incident. Upon entry, Iwaizumi observed Oikawa lying unresponsive on the floor with significant blood present on the surrounding lockers and tiles. A blood-stained dagger was found near the victim's body, consistent with apparent stab wounds. Emergency services were notified immediately, and responding officers secured the scene upon arrival. The victim was pronounced dead at the scene, and the locker room was treated as a restricted crime scene pending further forensic examination.
+</p>
     </div>
 
     <aside class="side-panel">
-  <a href="EvidenceBoard.html" class="evidence-btn">Evidence Board</a>
+      <a href="EvidenceBoard.html" class="evidence-btn">Evidence Board</a>
 
-  <svg width="220" height="220" viewBox="0 0 220 120">
-    <path id="curve" d="M30,100 A100,100 0 0,1 210,100" fill="transparent"/>
-    <text fill="#000" font-size="20" font-family="Freckle Face" textLength="120" lengthAdjust="spacing" font-weight="1000">
-      <textPath href="#curve" startOffset="45">
-        Suspects
-      </textPath>
-    </text>
-  </svg>
+      <h2 class="suspects-heading">Suspects</h2>
 
-  <div class="side-polaroids">
-    <div class="evidence-photo small rotate-1">
-      <div class="photo-content">
-        <img src="../kageyama.jpg" alt="Suspect 1" class="photo">
+      <div class="side-polaroids">
+        <div class="evidence-photo small rotate-1">
+          <div class="photo-content">
+            <img src="../Images/Suspects/kageyama.jpg" alt="Suspect 1" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #1 - Kageyama Tobio</h3>
+        </div>
+        <div class="evidence-photo small rotate-2">
+          <div class="photo-content">
+            <img src="../Images/Suspects/iwaizumi.jpg" alt="Suspect 2" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #2 - Iwaizumi Hajime</h3>
+        </div>
+        <div class="evidence-photo small rotate-3">
+          <div class="photo-content">
+            <img src="../Images/Suspects/ushijima.jpg" alt="Suspect 3" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #3 - Ushijima Wakatoshi</h3>
+        </div>
+        <div class="evidence-photo small rotate-4">
+          <div class="photo-content">
+            <img src="../Images/Suspects/hinatajump.jpg" alt="Suspect 4" class="photo">
+          </div>
+          <h3 class="case-name">Suspect #4 - Hinata Shoyo</h3>
+        </div>
       </div>
-      <h3 class="case-name">Suspect #1 - Kageyama Tobio</h3>
-    </div>
-    <div class="evidence-photo small rotate-2">
-      <div class="photo-content">
-        <img src="../iwaizumi.jpg" alt="Suspect 2" class="photo">
-      </div>
-      <h3 class="case-name">Suspect #2 - Iwaizumi Hajime</h3>
-    </div>
-    <div class="evidence-photo small rotate-3">
-      <div class="photo-content">
-        <img src="../ushijima.jpg" alt="Suspect 3" class="photo">
-      </div>
-      <h3 class="case-name">Suspect #3 - Ushijima Wakatoshi</h3>
-    </div>
-    <div class="evidence-photo small rotate-4">
-      <div class="photo-content">
-        <img src="../hinatajump.jpg" alt="Suspect 4" class="photo">
-      </div>
-      <h3 class="case-name">Suspect #4 - Hinata Shoyo</h3>
-    </div>
+    </aside>
   </div>
-</aside>
 
-<script src="../JS/CaseFile.js" defer></script>
+  <div id="glitch-overlay" class="glitch-overlay">
+    <img src="../Images/deadkawa.png" alt="Disturbing crime scene image" id="glitch-image">
+  </div>
 
+  <script src="../JS/CaseFile.js"></script>
 </body>
 </html>
