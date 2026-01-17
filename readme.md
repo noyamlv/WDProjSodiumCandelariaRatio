@@ -70,7 +70,6 @@ This is the reveal page, where you find out who the killer truly is after you su
 Case on Court is an interactive detective game that reimagines the world of Haikyuu!! as a murder mystery. Players investigate the suspicious death of Tooru Oikawa by analyzing alibis, cross-referencing evidence, and interrogating suspects to uncover hidden truths—and possibly, a shocking twist.
 
 ## [Features]
-
 Visuals:
 - Glitch effects (Example: Tooru's dead body LOL..)
 - Animated elements!
@@ -79,6 +78,13 @@ Visuals:
 Mechanics:
 - For the Interrogation room, implement a sliding javascript for when pressing the arrow button, it will move to another person to interrogate, and pressing anywhere else will lead you to start the interrogation
 - Evidence board which arranges all clues and is the mainframe of the investigation, making it easy for the player to see all the information they have collected
+
+## [How forms will be used]
+We will use forms in the "Final Accusation" part, in which we make the player "build" their case. 
+
+Dropdown/Radio Buttons: Use these to select the Culprit.
+Checkboxes: Use these to select the Evidence that proves the crime.
+Submit Button: The <button type="submit"> triggers the JavaScript function that checks if the user's logic matches the "True Ending" in which they catch the real culprit. If not, it will redirect to a different screen then show who the real culprit is.
 
 ## [Details]
 The game unfolds across seven key pages: Start, About, Home (Case File), Evidence Board, Interrogation Room, Final Accusation, and The Reveal. It emphasizes deductive reasoning while appealing to Haikyuu fans through character-driven storytelling. The interface uses clickable profiles, dialogue logs, and clue-matching mechanics to simulate real detective work. A major narrative twist—Oikawa potentially faking his death to frame others adds depth.
