@@ -13,32 +13,14 @@ body {
 
 .board-container {
   position: relative;
-  width: 900px;
-  height: 600px;
+  width: 1000px;
+  height: 550px;
   background: url('https://i.imgur.com/3J7qXyH.jpg') no-repeat center center;
   background-size: cover;
   border: 15px solid #8B4513;
   box-shadow: 0 0 30px rgba(0,0,0,0.7);
   padding: 20px;
   overflow: hidden;
-}
-
-.logo-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-}
-
-.logo-text {
-  font-size: 2.5em;
-  font-family: 'Playfair Display', serif;
-  color: #ffcc00;
-  text-shadow: 2px 2px 4px #000;
-  letter-spacing: 2px;
-  margin: 0;
 }
 
 .subtitle {
@@ -72,11 +54,12 @@ body {
   font-size: 0.8em;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .suspect-card:hover {
   transform: scale(1.05);
-  z-index: 20;
+  z-index: 30;
 }
 
 .suspect-photo {
@@ -98,6 +81,22 @@ body {
   border-radius: 4px 4px 0 0;
 }
 
+.dying-message {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: #fff8dc;
+  border: 1px dashed #8b6f4e;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 0.75em;
+  font-style: italic;
+  color: #5a3c2a;
+  text-align: center;
+  font-family: "Courier New", monospace;
+}
+
 .suspect-name {
   font-weight: bold;
   margin: 5px 0;
@@ -117,6 +116,7 @@ body {
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   cursor: help;
+  z-index: 10;
 }
 
 .note {
