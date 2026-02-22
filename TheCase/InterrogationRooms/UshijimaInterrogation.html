@@ -1,0 +1,194 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ushijima Wakatoshi: Interrogation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../Stylesheets/UshijimaInterrogation.css">
+</head>
+<body>
+
+<div class="game-wrapper" id="game" onclick="advance()">
+
+  <div class="room">
+    <div class="wall"></div>
+    <div class="floor"></div>
+
+    <div class="lamp-cord"></div>
+    <div class="lamp-bulb"></div>
+    <div class="lamp-shade"></div>
+    <div class="lamp-light"></div>
+
+    <div class="mirror"></div>
+
+    <div class="chair">
+      <div class="chair-back"></div>
+      <div class="chair-seat"></div>
+      <div class="chair-legs">
+        <div class="chair-leg"></div>
+        <div class="chair-leg"></div>
+      </div>
+    </div>
+
+    <div class="suspect" id="suspect">
+      <img class="suspect-head" id="suspectHead" src="../Images/Suspects/placeholder.jpg" alt="Suspect head">
+      <img class="suspect-body" src="../Images/Suspects/placeholder.jpg" alt="Suspect body">
+    </div>
+
+    <div class="desk">
+      <div class="desk-lamp"></div>
+      <div class="paper paper-1"></div>
+      <div class="paper paper-2"></div>
+      <div class="coffee"></div>
+      <div class="desk-top"></div>
+      <div class="desk-body"></div>
+      <div class="desk-legs">
+        <div class="desk-leg"></div>
+        <div class="desk-leg"></div>
+      </div>
+    </div>
+
+    <div class="clue-popup" id="cluePopup"></div>
+
+    <div class="end-screen" id="endScreen">
+      <div class="end-title">Case Closed</div>
+      <div class="end-summary" id="endSummary"></div>
+    <button class="restart-btn" onclick="window.location.href= '../TheCase/InterrogationRoom.html'">New Interrogation</button>
+    </div>
+  </div>
+
+  <div class="dialogue-section">
+    <div class="speaker-tag you" id="speakerTag">Detective</div>
+    <div class="dialogue-box">
+      <div class="dialogue-text" id="dialogueText"></div>
+      <div class="click-hint" id="clickHint">[ click to continue ]</div>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="case-info">CASE #6767 — THE DEATH OF OIKAWA TOORU</div>
+    <div class="clues-count" id="cluesDisplay">CLUES: 0 / 5</div>
+  </div>
+
+</div>
+
+<script>
+  const dialogue = [
+    { speaker: 'Detective', text: "ahahashsgha", clue: null },
+    { speaker: 'Ushijima Wakatoshi', text: "asbfkj", clue: null, nervous: true },
+    { speaker: 'Detective', text: "asfbsaffk", clue: null },
+    { speaker: 'Ushijima Wakatoshi', text: "asfbjs", clue: "CLUE 1: Clue here", nervous: true },
+    { speaker: 'Detective', text: "saf", clue: null },
+    { speaker: 'Ushijima Wakatoshi', text: "asff", clue: "CLUE 2: Clue here", nervous: true },
+    { speaker: 'Detective', text: "sfaff", clue: null },
+    { speaker: 'Ushijima Wakatoshi', text: "asfjbsakjf", clue: "CLUE 3: Clue here", nervous: true },
+    { speaker: 'Detective', text: "asfjbsakjf", clue: null },
+    { speaker: 'Ushijima Wakatoshi', text: "asfjbsakjf", clue: "CLUE 4: Clue here", nervous: true },
+    { speaker: 'Detective', text: "asfjbsakjf", clue: null },
+    { speaker: 'Ushijima Wakatoshi', text: "asfjbsakjf", clue: "CLUE 5: Clue here", nervous: true },
+    { speaker: 'Detective', text: "End of interrogation text here", clue: null },
+  ];
+
+  let current = 0;
+  let clues = 0;
+  let typing = false;
+  let fullText = '';
+  let displayedText = '';
+  let typeInterval = null;
+
+  const dialogueText = document.getElementById('dialogueText');
+  const speakerTag = document.getElementById('speakerTag');
+  const clickHint = document.getElementById('clickHint');
+  const cluePopup = document.getElementById('cluePopup');
+  const cluesDisplay = document.getElementById('cluesDisplay');
+  const endScreen = document.getElementById('endScreen');
+  const suspectHead = document.getElementById('suspectHead');
+
+  function showClue(text) {
+    clues++;
+    cluesDisplay.textContent = `CLUES: ${clues} / 5`;
+    cluePopup.textContent = '🔍 ' + text;
+    cluePopup.classList.add('show');
+    setTimeout(() => cluePopup.classList.remove('show'), 2800);
+  }
+
+  function typeText(text, callback) {
+    typing = true;
+    displayedText = '';
+    fullText = text;
+    let i = 0;
+    dialogueText.classList.add('typing');
+    clickHint.style.opacity = '0';
+
+    clearInterval(typeInterval);
+    typeInterval = setInterval(() => {
+      displayedText += text[i];
+      dialogueText.textContent = displayedText;
+      i++;
+      if (i >= text.length) {
+        clearInterval(typeInterval);
+        dialogueText.classList.remove('typing');
+        typing = false;
+        clickHint.style.opacity = '1';
+        if (callback) callback();
+      }
+    }, 28);
+  }
+
+  function showLine(index) {
+    if (index >= dialogue.length) {
+      endScreen.classList.add('show');
+      document.getElementById('endSummary').textContent =
+        `You uncovered all ${clues} clues during the interrogation. Use this information to solve the case!`;
+      return;
+    }
+    const line = dialogue[index];
+
+    const isYou = line.speaker === 'Detective';
+    speakerTag.textContent = isYou ? 'Detective (You)' : line.speaker;
+    speakerTag.className = 'speaker-tag ' + (isYou ? 'you' : 'suspect');
+
+    if (line.nervous) {
+      suspectHead.classList.remove('nervous');
+      void suspectHead.offsetWidth;
+      suspectHead.classList.add('nervous');
+    }
+
+    typeText(line.text, () => {
+      if (line.clue) {
+        setTimeout(() => showClue(line.clue), 400);
+      }
+    });
+  }
+
+  function advance() {
+    if (endScreen.classList.contains('show')) return;
+
+    if (typing) {
+      // Skip typewriter
+      clearInterval(typeInterval);
+      typing = false;
+      dialogueText.textContent = fullText;
+      dialogueText.classList.remove('typing');
+      clickHint.style.opacity = '1';
+      const line = dialogue[current];
+      if (line.clue) setTimeout(() => showClue(line.clue), 200);
+      return;
+    }
+
+    current++;
+    showLine(current);
+  }
+
+  function restartGame(e) {
+    e.stopPropagation();
+    current = 0;
+    clues = 0;
+    cluesDisplay.textContent = 'CLUES: 0 / 5';
+    endScreen.classList.remove('show');
+    showLine(0);
+  }
+
+  showLine(0);
+</script>
+</body>
+</html>
