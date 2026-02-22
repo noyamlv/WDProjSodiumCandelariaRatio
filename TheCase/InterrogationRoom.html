@@ -1,0 +1,115 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interrogation Room</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Stylesheets/InterrogationRoom.css">
+</head>
+<body>
+
+  <div class="scanlines"></div>
+  <div class="flash" id="flash"></div>
+
+  <div class="popup" id="popup">
+    <div id="popup-msg"></div>
+    <span class="popup-close" onclick="closePopup()">[ dismiss ]</span>
+  </div>
+
+  <div class="scene" id="scene">
+    <div class="ambient"></div>
+
+    <div class="nav-arrow nav-left" onclick="navigate('left')">
+      <svg viewBox="0 0 48 64"><polygon points="48,0 0,32 48,64"/></svg>
+      <span class="label">Previous character</span>
+    </div>
+
+    <div class="nav-arrow nav-right" onclick="navigate('right')">
+      <svg viewBox="0 0 48 64"><polygon points="0,0 48,32 0,64"/></svg>
+      <span class="label">Next character</span>
+    </div>
+
+    <div class="room">
+
+      <div class="mirror-window" title="One-way mirror">
+        <div class="mirror-inner">
+          <div class="room-light"></div>
+
+          <div class="suspect-img-wrap" id="suspect-figure">
+            <img id="suspect-img" src="" alt="suspect" />
+          </div>
+
+          <div class="name-tag" id="suspect-name"></div>
+
+          <div class="window-table"></div>
+        </div>
+      </div>
+
+      <div class="door-container" onclick="enterRoom()" title="Enter interrogation room">
+        <div class="door-frame">
+          <div class="door-panel">
+            <div class="door-window">
+              <div class="pane-sheen"></div>
+            </div>
+            <div class="doorknob"></div>
+            <div class="enter-prompt">
+              <div class="enter-text">ENTER ROOM<br>Begin interrogation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <script>
+        const suspects = [
+        { name: 'Shoyo Hinata',       number: '#10', img: 'hinata.png',   page: '../TheCase/InterrogationRooms/HinataInterrogation.html'   },
+        { name: 'Tobio Kageyama',     number: '#9',  img: 'kageyama.png', page: '../TheCase/InterrogationRooms/KageyamaInterrogation.html' },
+        { name: 'Wakatoshi Ushijima', number: '#1',  img: 'ushijima.png', page: '../TheCase/InterrogationRooms/UshijimaInterrogation.html' },
+        { name: 'Hajime Iwaizumi',    number: '#4',  img: 'iwaizumi.png', page: '../TheCase/InterrogationRooms/IwaizumiInterrogation.html' },
+        ];
+        let currentIndex = 0;
+
+        function navigate(dir) {
+        if (dir === 'left') {
+            currentIndex = (currentIndex - 1 + suspects.length) % suspects.length;
+        } else {
+            currentIndex = (currentIndex + 1) % suspects.length;
+        }
+        updateCharacter();
+        }
+
+        function updateCharacter() {
+        const c = suspects[currentIndex];
+        document.getElementById('suspect-img').src = c.img;
+        document.getElementById('suspect-img').alt = c.name;
+        document.getElementById('suspect-name').textContent = c.name + '  ' + c.number;
+        }
+
+        function enterRoom() {
+        const flash = document.getElementById('flash');
+        flash.classList.add('active');
+        setTimeout(() => {
+            window.location.href = suspects[currentIndex].page;
+        }, 150);
+        }
+
+        function showPopup(msg) {
+        document.getElementById('popup-msg').innerHTML = msg;
+        document.getElementById('popup').classList.add('show');
+        }
+
+        function closePopup() {
+        document.getElementById('popup').classList.remove('show');
+        }
+
+        document.getElementById('scene').addEventListener('click', function(e) {
+        if (e.target === this || e.target.classList.contains('ambient')) {
+            enterRoom();
+        }
+        });
+
+        updateCharacter();
+    </script>
+</body>
+</html>
