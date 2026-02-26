@@ -192,3 +192,7 @@ body {
   .suspect-card { width: 140px; height: 180px; }
   .clue-card { width: 120px; height: 60px; }
 }
+
+a{
+  color: #ccc;
+}

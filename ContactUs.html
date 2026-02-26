@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@400;600;700&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="favicon1.png">
+    <link rel="stylesheet" href="ContactUs.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="signal-overlay" id="signalOverlay">
+    <div class="signal-box" id="signalBox">
+      <span class="signal-icon"><img src="placeholder.png" alt="icon" width="42" height="42" /></span>
+      <div class="signal-title">MESSAGE TRANSMITTED<span class="signal-cursor"></span></div>
+      <div class="signal-sub">we'll get back to you soon ♪(^∇^*)</div>
+    </div>
+  </div>
+
+  <div class="cont">
+    <h1>Contact Us</h1>
+    <div class="card">
+      <h2>reach out!</h2>
+      <p>have any questions, suggestions, or bug reports? fill out the form below and we'll get back to you as soon as possible (❁´◡`❁)</p>
+    </div>
+
+    <div class="form-group" id="group-name">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="ex. Nishinoya Yuu" />
+      <div class="error-hint">⚠ please enter your name!</div>
+    </div>
+
+    <div class="form-group" id="group-email">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="tsukkikei@karasuno.com" />
+      <div class="error-hint">⚠ please enter a valid email!</div>
+    </div>
+
+    <div class="form-group" id="group-subject">
+      <label for="subject">Subject</label>
+      <select id="subject">
+        <option value="" disabled selected>Choose a topic...</option>
+        <option value="bug">Bug Report</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="question">General Question</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+      <div class="error-hint">⚠ please choose a topic!</div>
+    </div>
+
+    <div class="form-group" id="group-message">
+      <label for="message">Your Message</label>
+      <textarea id="message" placeholder="tell us what's on your mind! (o゜▽゜)o☆"></textarea>
+      <div class="error-hint">⚠ please write us a message!</div>
+    </div>
+
+    <button class="btn" onclick="handleSubmit()">Send Message ✉️</button>
+
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-btn">Home Page</a>
+      <a href="About.html" class="nav-btn">Back to About Page</a>
+    </div>
+
+  </div>
+
+  
+
+  <script>
+    ['name','email','subject','message'].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener('input', () => clearError(id));
+      el.addEventListener('change', () => clearError(id));
+    });
+
+    function clearError(id) {
+      const el = document.getElementById(id);
+      const group = document.getElementById('group-' + id);
+      el.classList.remove('error');
+      group.classList.remove('has-error');
+    }
+
+    function handleSubmit() {
+      const nameEl    = document.getElementById('name');
+      const emailEl   = document.getElementById('email');
+      const subjectEl = document.getElementById('subject');
+      const messageEl = document.getElementById('message');
+
+      const name    = nameEl.value.trim();
+      const email   = emailEl.value.trim();
+      const subject = subjectEl.value;
+      const message = messageEl.value.trim();
+
+      let hasError = false;
+
+      if (!name) {
+        markError('name'); hasError = true;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        markError('email'); hasError = true;
+      }
+      if (!subject) {
+        markError('subject'); hasError = true;
+      }
+      if (!message) {
+        markError('message'); hasError = true;
+      }
+
+      if (hasError) return;
+
+      nameEl.value    = '';
+      emailEl.value   = '';
+      subjectEl.value = '';
+      messageEl.value = '';
+
+      const body = document.body;
+      const cont = document.querySelector('.cont');
+      body.classList.add('glitching');
+      cont.classList.add('glitching');
+      setTimeout(() => {
+        body.classList.remove('glitching');
+        cont.classList.remove('glitching');
+
+        const overlay = document.getElementById('signalOverlay');
+        const oldBox  = document.getElementById('signalBox');
+        const newBox  = oldBox.cloneNode(true);
+        newBox.id = 'signalBox';
+        oldBox.replaceWith(newBox);
+
+        overlay.classList.add('show');
+        setTimeout(() => {
+          overlay.classList.remove('show');
+        }, 3000);
+      }, 700);
+    }
+
+    function markError(id) {
+      const el = document.getElementById(id);
+      const group = document.getElementById('group-' + id);
+      el.classList.add('error');
+      group.classList.add('has-error');
+    }
+  </script>
+</body>
+</html>
