@@ -24,9 +24,6 @@ Mechanics:
 - A specific page for the timeline of the events
 
 
-
-
-
 Third quarter update is at the bottom!
 
 # Title: __Case on Court__ 
@@ -113,7 +110,7 @@ We will use forms in the "Final Accusation" part, in which we make the player "b
 
 Dropdown/Radio Buttons: Use these to select the Culprit.
 Checkboxes: Use these to select the Evidence that proves the crime.
-Submit Button: The <button type="submit"> triggers the JavaScript function that checks if the user's logic matches the "True Ending" in which they catch the real culprit. If not, it will redirect to a different screen then show who the real culprit is.
+Submit Button: The "button type="submit" triggers the JavaScript function that checks if the user's logic matches the "True Ending" in which they catch the real culprit. If not, it will redirect to a different screen then show who the real culprit is.
 
 ## [Details]
 The game unfolds across seven key pages: Start, About, Home (Case File), Evidence Board, Interrogation Room, Final Accusation, and The Reveal. It emphasizes deductive reasoning while appealing to Haikyuu fans through character-driven storytelling. The interface uses clickable profiles, dialogue logs, and clue-matching mechanics to simulate real detective work. A major narrative twist—Oikawa potentially faking his death to frame others adds depth.
@@ -124,3 +121,8 @@ The game unfolds across seven key pages: Start, About, Home (Case File), Evidenc
 - JavaScript logic correctly validates user accusations and displays the appropriate reveal (true culprit + explanation).
 - Responsive design works across desktop and mobile views.
 - Assets (favicon, images) are finalized and properly integrated.
+
+
+
+
+**Submitted by: Eriana Ratio and Ruisse Candelaria on 18 March 2026 to Sir Roy Canseco in partial requirement of Computer Science 3**
