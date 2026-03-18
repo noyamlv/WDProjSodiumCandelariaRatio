@@ -1,3 +1,32 @@
+**Case on Court**
+
+**Case on Court** is an interactive detective game that reimagines the world of Haikyuu!! as a murder mystery. Players investigate the suspicious death of Tooru Oikawa by analyzing alibis, cross-referencing evidence, and interrogating suspects to uncover hidden truths—and possibly, a shocking twist.
+
+The website is designed to develop critical thinking and deductive reasoning skills by having users solve a case. To succeed, players must analyze character alibis, evaluate physical evidence, and identify contradictions to uncover the truth. It primarily targets fans of Haikyuu!! who also enjoy mysteries. It allows them to test their logic in an entertaining way while gaining a deeper insight into the characters' relationships.
+
+**They will love this project because:**
+- It features the anime Haikyu!!, which is an anime with a very big fanbase, especially since the character that died in the story is one of the most popular characters in the anime, Oikawa Tooru.
+- It has references to Sherlock Holmes which is a known murder mystery character, who is also one of the inspirations for this project.
+- It is a detective/murder mystery game, which caters to people who likes puzzles, solving things, and mysteries.
+
+**This project features / includes:**
+Visuals:
+- Glitch effects (Example: Tooru's dead body LOL..)
+- Animated elements!
+- Change favicon as story progresses, make glitch effects worse too
+
+Mechanics:
+- For the Interrogation room, implement a sliding javascript for when pressing the arrow button, it will move to another person to interrogate, and pressing anywhere else will lead you to start the interrogation
+- Evidence board which arranges all clues and is the mainframe of the investigation, making it easy for the player to see all the information they have collected
+
+**This project does not include:**
+- Actual scene of the victim’s death
+- A specific page for the timeline of the events
+
+
+
+
+
 Third quarter update is at the bottom!
 
 # Title: __Case on Court__ 
